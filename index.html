@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number to million billion converter</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="number" name="" id="inputnum" />
+      <button type="button"id="btn1">click me</button>
+    </form>
+    <p class="" id="output">showing data:</p>
+  </body>
+  <script>
+    //taking input 
+    let inputnum = document.getElementById("inputnum");
+    console.log(inputnum);
+
+    let btn1 = document.getElementById("btn1");
+    console.log(btn1);
+    let output = document.getElementById("output")
+    console.log(output);
+
+
+    let calc =()=>{
+        let inbillion = inputnum.value/(1000000000)
+        let inmillion = inputnum.value/(1000000)
+        return [inbillion,inmillion]
+    }
+
+    function action() {
+      calcvalue = calc();
+      
+      calcvalueb = calcvalue[0];
+      cacvaluem = calcvalue[1];
+      output.innerHTML = (`${calcvalueb} billion / ${cacvaluem} million`)
+    }
+
+    btn1.addEventListener('click', action);
+
+    console.log(output);
+  </script>
+</html>
